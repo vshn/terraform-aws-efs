@@ -29,7 +29,7 @@ resource "aws_efs_mount_target" "efs_mount_target" {
   security_groups = var.security_groups
 }
 
-resource "kubernetes_storage_class" "efs_storage_class" {
+resource "kubernetes_storage_class_v1" "efs_storage_class" {
   metadata {
     name = var.storage_class_name
   }
